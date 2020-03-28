@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DE47BF9AB5ED716673155A6 /* Pods_Repos_VIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8707016699E1B94B9695C788 /* Pods_Repos_VIPERTests.framework */; };
 		C558AE0D242F907A00321096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE0C242F907A00321096 /* AppDelegate.swift */; };
 		C558AE0F242F907A00321096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE0E242F907A00321096 /* SceneDelegate.swift */; };
-		C558AE11242F907A00321096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE10242F907A00321096 /* ViewController.swift */; };
+		C558AE11242F907A00321096 /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE10242F907A00321096 /* ReposListViewController.swift */; };
 		C558AE14242F907A00321096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C558AE12242F907A00321096 /* Main.storyboard */; };
 		C558AE16242F907A00321096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C558AE15242F907A00321096 /* Assets.xcassets */; };
 		C558AE19242F907A00321096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C558AE17242F907A00321096 /* LaunchScreen.storyboard */; };
 		C558AE24242F907A00321096 /* Repos_VIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE23242F907A00321096 /* Repos_VIPERTests.swift */; };
+		C5D87FA6242F96E7000BEE39 /* ReposListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */; };
+		C5D87FA9242F9C52000BEE39 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA8242F9C52000BEE39 /* Repo.swift */; };
+		C5D87FAC242F9F4A000BEE39 /* ReposListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FAB242F9F4A000BEE39 /* ReposListPresenter.swift */; };
+		C5D87FB0242FA076000BEE39 /* ReposListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FAF242FA076000BEE39 /* ReposListInteractor.swift */; };
+		C5D87FB2242FA08B000BEE39 /* ReposListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FB1242FA08B000BEE39 /* ReposListRouter.swift */; };
+		C5D87FB5242FBB2B000BEE39 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FB4242FBB2B000BEE39 /* DataService.swift */; };
+		C5D87FB7242FBBEE000BEE39 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FB6242FBBEE000BEE39 /* Utilities.swift */; };
+		E660AE43E47096F065477A38 /* Pods_Repos_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A7946A29796310AC107AF6 /* Pods_Repos_VIPER.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4414F4FB0825AC4B9201E610 /* Pods-Repos-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repos-VIPER.release.xcconfig"; path = "Target Support Files/Pods-Repos-VIPER/Pods-Repos-VIPER.release.xcconfig"; sourceTree = "<group>"; };
+		783EF30E6709A8F7B8F14BA9 /* Pods-Repos-VIPERTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repos-VIPERTests.debug.xcconfig"; path = "Target Support Files/Pods-Repos-VIPERTests/Pods-Repos-VIPERTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8707016699E1B94B9695C788 /* Pods_Repos_VIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repos_VIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930511912302B04B7F4179A8 /* Pods-Repos-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repos-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-Repos-VIPER/Pods-Repos-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A7946A29796310AC107AF6 /* Pods_Repos_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repos_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C558AE09242F907A00321096 /* Repos-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repos-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C558AE0C242F907A00321096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C558AE0E242F907A00321096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C558AE10242F907A00321096 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C558AE10242F907A00321096 /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		C558AE13242F907A00321096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C558AE15242F907A00321096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C558AE18242F907A00321096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +52,14 @@
 		C558AE1F242F907A00321096 /* Repos-VIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repos-VIPERTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C558AE23242F907A00321096 /* Repos_VIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos_VIPERTests.swift; sourceTree = "<group>"; };
 		C558AE25242F907A00321096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListProtocols.swift; sourceTree = "<group>"; };
+		C5D87FA8242F9C52000BEE39 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		C5D87FAB242F9F4A000BEE39 /* ReposListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListPresenter.swift; sourceTree = "<group>"; };
+		C5D87FAF242FA076000BEE39 /* ReposListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListInteractor.swift; sourceTree = "<group>"; };
+		C5D87FB1242FA08B000BEE39 /* ReposListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListRouter.swift; sourceTree = "<group>"; };
+		C5D87FB4242FBB2B000BEE39 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C5D87FB6242FBBEE000BEE39 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C7AD4922E71C568C1C26157A /* Pods-Repos-VIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repos-VIPERTests.release.xcconfig"; path = "Target Support Files/Pods-Repos-VIPERTests/Pods-Repos-VIPERTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E660AE43E47096F065477A38 /* Pods_Repos_VIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +75,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE47BF9AB5ED716673155A6 /* Pods_Repos_VIPERTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66EB33A4CD3242D0B4DB5A94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8A7946A29796310AC107AF6 /* Pods_Repos_VIPER.framework */,
+				8707016699E1B94B9695C788 /* Pods_Repos_VIPERTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		983C11512C5C1CCFABF4801F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				930511912302B04B7F4179A8 /* Pods-Repos-VIPER.debug.xcconfig */,
+				4414F4FB0825AC4B9201E610 /* Pods-Repos-VIPER.release.xcconfig */,
+				783EF30E6709A8F7B8F14BA9 /* Pods-Repos-VIPERTests.debug.xcconfig */,
+				C7AD4922E71C568C1C26157A /* Pods-Repos-VIPERTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C558AE00242F907A00321096 = {
 			isa = PBXGroup;
 			children = (
 				C558AE0B242F907A00321096 /* Repos-VIPER */,
 				C558AE22242F907A00321096 /* Repos-VIPERTests */,
 				C558AE0A242F907A00321096 /* Products */,
+				983C11512C5C1CCFABF4801F /* Pods */,
+				66EB33A4CD3242D0B4DB5A94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				C558AE0C242F907A00321096 /* AppDelegate.swift */,
-				C558AE0E242F907A00321096 /* SceneDelegate.swift */,
-				C558AE10242F907A00321096 /* ViewController.swift */,
-				C558AE12242F907A00321096 /* Main.storyboard */,
-				C558AE15242F907A00321096 /* Assets.xcassets */,
-				C558AE17242F907A00321096 /* LaunchScreen.storyboard */,
-				C558AE1A242F907A00321096 /* Info.plist */,
+				C5D87FA2242F9696000BEE39 /* ReposList */,
+				C558AE2E242F948500321096 /* Supporting Files */,
 			);
 			path = "Repos-VIPER";
 			sourceTree = "<group>";
@@ -99,6 +141,89 @@
 			path = "Repos-VIPERTests";
 			sourceTree = "<group>";
 		};
+		C558AE2E242F948500321096 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C558AE12242F907A00321096 /* Main.storyboard */,
+				C558AE0E242F907A00321096 /* SceneDelegate.swift */,
+				C558AE15242F907A00321096 /* Assets.xcassets */,
+				C558AE17242F907A00321096 /* LaunchScreen.storyboard */,
+				C558AE1A242F907A00321096 /* Info.plist */,
+				C5D87FB6242FBBEE000BEE39 /* Utilities.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5D87FA2242F9696000BEE39 /* ReposList */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FB3242FBB14000BEE39 /* Service */,
+				C5D87FA4242F96C6000BEE39 /* Protocols */,
+				C5D87FA3242F96A6000BEE39 /* View */,
+				C5D87FAA242F9F2E000BEE39 /* Presenter */,
+				C5D87FAE242FA058000BEE39 /* Router */,
+				C5D87FAD242FA050000BEE39 /* Interactor */,
+				C5D87FA7242F9C45000BEE39 /* Entity */,
+			);
+			path = ReposList;
+			sourceTree = "<group>";
+		};
+		C5D87FA3242F96A6000BEE39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C558AE10242F907A00321096 /* ReposListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5D87FA4242F96C6000BEE39 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C5D87FA7242F9C45000BEE39 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FA8242F9C52000BEE39 /* Repo.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C5D87FAA242F9F2E000BEE39 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FAB242F9F4A000BEE39 /* ReposListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C5D87FAD242FA050000BEE39 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FAF242FA076000BEE39 /* ReposListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C5D87FAE242FA058000BEE39 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FB1242FA08B000BEE39 /* ReposListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C5D87FB3242FBB14000BEE39 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C5D87FB4242FBB2B000BEE39 /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C558AE28242F907A00321096 /* Build configuration list for PBXNativeTarget "Repos-VIPER" */;
 			buildPhases = (
+				0787ED2A6B6E0F079E4D6149 /* [CP] Check Pods Manifest.lock */,
 				C558AE05242F907A00321096 /* Sources */,
 				C558AE06242F907A00321096 /* Frameworks */,
 				C558AE07242F907A00321096 /* Resources */,
+				27B9C0FED0F85B068E2CCA95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C558AE2B242F907A00321096 /* Build configuration list for PBXNativeTarget "Repos-VIPERTests" */;
 			buildPhases = (
+				A47E9F2AE258EA2BE5B138A7 /* [CP] Check Pods Manifest.lock */,
 				C558AE1B242F907A00321096 /* Sources */,
 				C558AE1C242F907A00321096 /* Frameworks */,
 				C558AE1D242F907A00321096 /* Resources */,
@@ -195,13 +323,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0787ED2A6B6E0F079E4D6149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Repos-VIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27B9C0FED0F85B068E2CCA95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Repos-VIPER/Pods-Repos-VIPER-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Repos-VIPER/Pods-Repos-VIPER-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Repos-VIPER/Pods-Repos-VIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A47E9F2AE258EA2BE5B138A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Repos-VIPERTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C558AE05242F907A00321096 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C558AE11242F907A00321096 /* ViewController.swift in Sources */,
+				C5D87FB5242FBB2B000BEE39 /* DataService.swift in Sources */,
+				C558AE11242F907A00321096 /* ReposListViewController.swift in Sources */,
+				C5D87FA6242F96E7000BEE39 /* ReposListProtocols.swift in Sources */,
+				C5D87FA9242F9C52000BEE39 /* Repo.swift in Sources */,
+				C5D87FB0242FA076000BEE39 /* ReposListInteractor.swift in Sources */,
 				C558AE0D242F907A00321096 /* AppDelegate.swift in Sources */,
+				C5D87FAC242F9F4A000BEE39 /* ReposListPresenter.swift in Sources */,
+				C5D87FB2242FA08B000BEE39 /* ReposListRouter.swift in Sources */,
+				C5D87FB7242FBBEE000BEE39 /* Utilities.swift in Sources */,
 				C558AE0F242F907A00321096 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -360,10 +559,12 @@
 		};
 		C558AE29242F907A00321096 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930511912302B04B7F4179A8 /* Pods-Repos-VIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Repos-VIPER/Info.plist";
+				INFOPLIST_FILE = "Repos-VIPER/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,10 +578,12 @@
 		};
 		C558AE2A242F907A00321096 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4414F4FB0825AC4B9201E610 /* Pods-Repos-VIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Repos-VIPER/Info.plist";
+				INFOPLIST_FILE = "Repos-VIPER/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +597,7 @@
 		};
 		C558AE2C242F907A00321096 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783EF30E6709A8F7B8F14BA9 /* Pods-Repos-VIPERTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +619,7 @@
 		};
 		C558AE2D242F907A00321096 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7AD4922E71C568C1C26157A /* Pods-Repos-VIPERTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
