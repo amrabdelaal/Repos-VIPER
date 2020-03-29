@@ -41,7 +41,7 @@ protocol ReposListInteractorOutputProtocol: class {
 
 // MARK:- Presenter - Router
 protocol ReposListRouterProtocol: class {
-    static func createReposListModule() -> UIViewController
+    static func createReposListModule(reposListRef: ReposListViewController)
     // PRESENTER -> WIREFRAME
 //    func presentPostDetailScreen(from view: PostListViewProtocol, forPost post: PostModel)
 }

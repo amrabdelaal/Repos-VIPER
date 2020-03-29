@@ -8,16 +8,34 @@
 
 import Foundation
 
-class ReposItems: Codable {
+struct ReposItems: Codable {
     let items: [Repo]
 }
 
-class Repo: Codable {
-    let id: Int
-    let node_id: String
-    let name: String
-    let full_name: String
-    let html_url: String
-    let fork: Bool
-    let updated_at: String
+struct Repo: Codable {
+    var id: Int
+    var nodeId: String
+    var name: String
+    var fullName: String
+    var htmlUrl: String
+    var fork: Bool
+    var forks: Int
+    var watchers: Int
+    var updatedAt: String
+    var description: String
+    var owner: Owner
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case nodeId = "node_id"
+        case name = "name"
+        case fullName = "full_name"
+        case htmlUrl = "html_url"
+        case fork = "fork"
+        case forks = "forks"
+        case watchers = "watchers"
+        case updatedAt = "updated_at"
+        case description = "description"
+        case owner = "owner"
+    }
 }

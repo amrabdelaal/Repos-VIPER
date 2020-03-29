@@ -7,6 +7,8 @@ target 'Repos-VIPER' do
 
   # Pods for Repos-VIPER
   pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'PKHUD'
 
   target 'Repos-VIPERTests' do
     inherit! :search_paths
