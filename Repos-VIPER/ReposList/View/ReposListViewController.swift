@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import PKHUD
 
 class ReposListViewController: UIViewController {
 
     //MARK:- IBOutlets
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Variables
@@ -21,20 +23,31 @@ class ReposListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ReposListRouter.createReposListModule(reposListRef: self)
-        self.presenter?.getRepos()
+        if let searchText = self.searchBar.text {
+            self.presenter?.getRepos(with: searchText)
+        }
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()
     }
 }
 
 extension ReposListViewController: ReposListViewProtocol {
+    
     func showRepos(with repos: [Repo]) {
         self.repos = repos
         self.tableView.reloadData()
     }
     
+    func showLoading() {
+        HUD.show(.progress)
+    }
+    
+    func hideLoading() {
+        HUD.hide()
+    }
+    
     func showError() {
-        
+        HUD.flash(.label("Problem Happened"), delay: 2.0)
     }
     
 }
@@ -57,6 +70,9 @@ extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ReposListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.tableView.reloadData()
+        searchBar.resignFirstResponder()
+        if let searchBar = searchBar.text {
+            self.presenter?.getRepos(with: searchBar)
+        }
     }
 }

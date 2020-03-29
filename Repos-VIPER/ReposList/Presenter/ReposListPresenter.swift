@@ -9,25 +9,25 @@
 import Foundation
 
 class ReposListPresenter: ReposListPresenterProtocol {
+    func getRepos(with language: String) {
+        view?.showLoading()
+        interactor?.retrieveRepos(with: language)
+    }
+    
     weak var view: ReposListViewProtocol?
     var interactor: ReposListInteractorInputProtocol?
     var router: ReposListRouterProtocol?
-    
-    
-    func getRepos() {
-        // TODO: Add Loading
-        interactor?.retrieveRepos()
-    }
+
 }
 
 extension ReposListPresenter: ReposListInteractorOutputProtocol {
     func didRetrieveRepos(_ repos: [Repo]) {
-        // TODO: Remove Loading
+        view?.hideLoading()
         view?.showRepos(with: repos)
     }
     
     func onError() {
-        // TODO: Handel Error
+        view?.showError()
     }
     
 }

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Language" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-Wg-50y">
+                            <searchBar contentMode="redraw" text="swift" placeholder="Language" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-Wg-50y">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -114,16 +114,17 @@
                         <constraints>
                             <constraint firstItem="tC2-fR-m3H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Lv-zN-PdL"/>
                             <constraint firstItem="ge8-Wg-50y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oo9-Bc-4Tk"/>
-                            <constraint firstItem="tC2-fR-m3H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="R74-bo-OBI"/>
                             <constraint firstItem="ge8-Wg-50y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UYw-6a-N6q"/>
                             <constraint firstItem="ge8-Wg-50y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UjV-uS-Sqy"/>
                             <constraint firstItem="tC2-fR-m3H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bMq-6F-gpg"/>
                             <constraint firstItem="tC2-fR-m3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwX-4e-CuO"/>
+                            <constraint firstItem="tC2-fR-m3H" firstAttribute="top" secondItem="ge8-Wg-50y" secondAttribute="bottom" id="iJl-sU-zK9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="NWg-k7-Jaa"/>
                     <connections>
+                        <outlet property="searchBar" destination="ge8-Wg-50y" id="iHY-ZH-ZYp"/>
                         <outlet property="tableView" destination="tC2-fR-m3H" id="FsA-Gu-hZt"/>
                     </connections>
                 </viewController>

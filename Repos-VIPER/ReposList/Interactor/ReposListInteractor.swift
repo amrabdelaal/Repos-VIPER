@@ -19,8 +19,8 @@ class ReposListInteractor: ReposListInteractorInputProtocol {
         self.dataService = dataService
     }
 
-    func retrieveRepos() {
-        self.dataService?.getRepos(by: "swift", success: { [weak self] (repos) in
+    func retrieveRepos(with language: String) {
+        self.dataService?.getRepos(by: language, success: { [weak self] (repos) in
             if let repos = repos {
                 self?.presenter?.didRetrieveRepos(repos)
             } else {

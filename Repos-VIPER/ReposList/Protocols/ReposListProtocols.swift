@@ -15,7 +15,7 @@ protocol ReposListPresenterProtocol: class {
     var interactor: ReposListInteractorInputProtocol? { get set }
     var router: ReposListRouterProtocol? { get set }
     
-    func getRepos()
+    func getRepos(with language: String)
 }
 
 // MARK:- Presenter - View
@@ -24,13 +24,15 @@ protocol ReposListViewProtocol: class {
     
     func showRepos(with repos: [Repo])
     func showError()
+    func showLoading()
+    func hideLoading()
 }
 
 // MARK:- Presenter - Interactor
 protocol ReposListInteractorInputProtocol: class {
     var presenter: ReposListInteractorOutputProtocol? { get set }
     
-    func retrieveRepos()
+    func retrieveRepos(with language: String)
 }
 
 // MARK:- Interactor - Presenter
@@ -43,5 +45,5 @@ protocol ReposListInteractorOutputProtocol: class {
 protocol ReposListRouterProtocol: class {
     static func createReposListModule(reposListRef: ReposListViewController)
     // PRESENTER -> WIREFRAME
-//    func presentPostDetailScreen(from view: PostListViewProtocol, forPost post: PostModel)
+    //    func presentPostDetailScreen(from view: PostListViewProtocol, forPost post: PostModel)
 }
