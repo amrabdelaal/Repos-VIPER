@@ -20,6 +20,7 @@ struct Repo: Codable {
     var htmlUrl: String
     var fork: Bool
     var forks: Int
+    var forksUrl: String
     var watchers: Int
     var updatedAt: String
     var description: String
@@ -33,6 +34,7 @@ struct Repo: Codable {
         case htmlUrl = "html_url"
         case fork = "fork"
         case forks = "forks"
+        case forksUrl = "forks_url"
         case watchers = "watchers"
         case updatedAt = "updated_at"
         case description = "description"

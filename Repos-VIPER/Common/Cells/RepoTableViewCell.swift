@@ -29,11 +29,19 @@ class RepoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        self.selectionStyle = .none
     }
     
-    func configure(with repo: Repo) {
+    func configure(with repo: Repo, isFork: Bool = false) {
         if let url = URL(string: repo.owner.avatarUrl) {
             self.avatar.af.setImage(withURL: url)
+        }
+        if isFork == true {
+            self.repoName.text = repo.owner.login
+            self.forksNum.text = ""
+            self.watchersNum.text = ""
+            self.repoDescription.text = ""
+        } else {
             self.repoName.text = repo.name
             self.forksNum.text = "forks: \(repo.forks)"
             self.watchersNum.text = "watchers: \(repo.watchers)"

@@ -31,4 +31,24 @@ class DataService {
             }
         }
     }
+    
+    func getRepoData(by url: String, success: @escaping ([Repo]?) -> (), failure: @escaping (Error?) -> ()) {
+        
+        AF.request(url).responseJSON { response in
+            if let error = response.error {
+                failure(error)
+            }
+            
+            if let data = response.data {
+                do {
+                    let repos = try JSONDecoder().decode([Repo].self, from: data)
+                    success(repos)
+                } catch {
+                    failure(Utilities.GenericError.wrongJsonFormat)
+                }
+            } else {
+                failure(Utilities.GenericError.connectionFaild)
+            }
+        }
+    }
 }

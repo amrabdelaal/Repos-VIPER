@@ -1,41 +1,56 @@
 //
-//  ReposListViewController.swift
+//  RepoDetailsViewController.swift
 //  Repos-VIPER
 //
-//  Created by Amr on 28.03.20.
+//  Created by Amr on 30.03.20.
 //  Copyright © 2020 Amr. All rights reserved.
 //
 
 import UIKit
 import PKHUD
 
-class ReposListViewController: UIViewController {
+class RepoDetailsViewController: UIViewController {
 
-    //MARK:- IBOutlets
-    @IBOutlet weak var searchBar: UISearchBar!
+    // MARK:- IBOutlets
+    @IBOutlet weak var repoName: UILabel!
+    @IBOutlet weak var repoOwnerBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Variables
-    var presenter: ReposListPresenterProtocol?
-    var repos: [Repo] = [Repo]()
+    var presenter: RepoDetailsPresenterProtocol?
+    var repo: Repo?
+    var forks: [Repo] = [Repo]()
     
-    //MARK:- View LifeCycle
+    // MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateUI()
+    }
+    
+    private func updateUI() {
+        if let repo = repo {
+            self.repoName.text = repo.name
+            self.repoOwnerBtn.setTitle(repo.owner.login, for: .normal)
+            self.presenter?.getForks(with: repo.forksUrl)
+        }
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()
         self.tableView.register(UINib(nibName: RepoTableViewCell.Identifier, bundle: nil), forCellReuseIdentifier: RepoTableViewCell.Identifier)
-        ReposListRouter.createReposListModule(reposListRef: self)
-        if let searchText = self.searchBar.text {
-            self.presenter?.getRepos(with: searchText)
-        }
+        
+    }
+    
+    // MARK:- IBActions
+    @IBAction func backAction(_ sender: Any) {
+        presenter?.backToReposList(from: self)
+    }
+    
+    @IBAction func repoOwnerAction(_ sender: Any) {
     }
 }
 
-extension ReposListViewController: ReposListViewProtocol {
-    
-    func showRepos(with repos: [Repo]) {
-        self.repos = repos
+extension RepoDetailsViewController: RepoDetailsViewProtocol {
+    func showForks(with forks: [Repo]) {
+        self.forks = forks
         self.tableView.reloadData()
     }
     
@@ -53,31 +68,22 @@ extension ReposListViewController: ReposListViewProtocol {
     
 }
 
-extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
+extension RepoDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.repos.count
+        return self.forks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell: RepoTableViewCell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.Identifier, for: indexPath) as? RepoTableViewCell {
-            cell.configure(with: self.repos[indexPath.row])
+            cell.configure(with: self.forks[indexPath.row], isFork: true)
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showRepoDetails(with: self.repos[indexPath.row], from: self)
+//        presenter?.showRepoDetails(with: self.repos[indexPath.row], from: self)
     }
 
-}
-
-extension ReposListViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        if let searchBar = searchBar.text {
-            self.presenter?.getRepos(with: searchBar)
-        }
-    }
 }

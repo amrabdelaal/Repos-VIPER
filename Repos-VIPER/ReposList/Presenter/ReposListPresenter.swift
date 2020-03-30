@@ -7,16 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 class ReposListPresenter: ReposListPresenterProtocol {
+    
+    weak var view: ReposListViewProtocol?
+    var interactor: ReposListInteractorInputProtocol?
+    var router: ReposListRouterProtocol?
+    
     func getRepos(with language: String) {
         view?.showLoading()
         interactor?.retrieveRepos(with: language)
     }
     
-    weak var view: ReposListViewProtocol?
-    var interactor: ReposListInteractorInputProtocol?
-    var router: ReposListRouterProtocol?
+    func showRepoDetails(with repo: Repo, from view: UIViewController) {
+        router?.pushToRepoDetails(with: repo, from: view)
+    }
 
 }
 
