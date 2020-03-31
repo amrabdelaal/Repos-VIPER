@@ -14,7 +14,6 @@
 		C558AE14242F907A00321096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C558AE12242F907A00321096 /* Main.storyboard */; };
 		C558AE16242F907A00321096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C558AE15242F907A00321096 /* Assets.xcassets */; };
 		C558AE19242F907A00321096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C558AE17242F907A00321096 /* LaunchScreen.storyboard */; };
-		C558AE24242F907A00321096 /* Repos_VIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558AE23242F907A00321096 /* Repos_VIPERTests.swift */; };
 		C585EF612430A84E0002A379 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585EF602430A84E0002A379 /* RepoTableViewCell.swift */; };
 		C592A43D24324966003D29FF /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C592A43C24324966003D29FF /* RepoTableViewCell.xib */; };
 		C592A44124324CA1003D29FF /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A44024324CA1003D29FF /* RepoDetailsViewController.swift */; };
@@ -29,6 +28,10 @@
 		C592A45E2433371B003D29FF /* UserReposListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45D2433371B003D29FF /* UserReposListInteractor.swift */; };
 		C592A46124333A12003D29FF /* UserRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45F24333A12003D29FF /* UserRepoTableViewCell.swift */; };
 		C592A46224333A12003D29FF /* UserRepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C592A46024333A12003D29FF /* UserRepoTableViewCell.xib */; };
+		C592A4642433D61D003D29FF /* ReposSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = C592A4632433D61D003D29FF /* ReposSearch.json */; };
+		C592A4662433D645003D29FF /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A4652433D645003D29FF /* MockDataService.swift */; };
+		C592A4682433E32C003D29FF /* ReposListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A4672433E32C003D29FF /* ReposListInteractorTests.swift */; };
+		C592A46A2433E363003D29FF /* ReposListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A4692433E363003D29FF /* ReposListPresenterTests.swift */; };
 		C5A88EAC243147DA00797A51 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A88EAB243147DA00797A51 /* Owner.swift */; };
 		C5D87FA6242F96E7000BEE39 /* ReposListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */; };
 		C5D87FA9242F9C52000BEE39 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA8242F9C52000BEE39 /* Repo.swift */; };
@@ -65,7 +68,6 @@
 		C558AE18242F907A00321096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C558AE1A242F907A00321096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C558AE1F242F907A00321096 /* Repos-VIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Repos-VIPERTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C558AE23242F907A00321096 /* Repos_VIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos_VIPERTests.swift; sourceTree = "<group>"; };
 		C558AE25242F907A00321096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C585EF602430A84E0002A379 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		C592A43C24324966003D29FF /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
@@ -81,6 +83,10 @@
 		C592A45D2433371B003D29FF /* UserReposListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListInteractor.swift; sourceTree = "<group>"; };
 		C592A45F24333A12003D29FF /* UserRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoTableViewCell.swift; sourceTree = "<group>"; };
 		C592A46024333A12003D29FF /* UserRepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRepoTableViewCell.xib; sourceTree = "<group>"; };
+		C592A4632433D61D003D29FF /* ReposSearch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ReposSearch.json; sourceTree = "<group>"; };
+		C592A4652433D645003D29FF /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		C592A4672433E32C003D29FF /* ReposListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListInteractorTests.swift; sourceTree = "<group>"; };
+		C592A4692433E363003D29FF /* ReposListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListPresenterTests.swift; sourceTree = "<group>"; };
 		C5A88EAB243147DA00797A51 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListProtocols.swift; sourceTree = "<group>"; };
 		C5D87FA8242F9C52000BEE39 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -169,8 +175,11 @@
 		C558AE22242F907A00321096 /* Repos-VIPERTests */ = {
 			isa = PBXGroup;
 			children = (
-				C558AE23242F907A00321096 /* Repos_VIPERTests.swift */,
+				C592A4632433D61D003D29FF /* ReposSearch.json */,
 				C558AE25242F907A00321096 /* Info.plist */,
+				C592A4652433D645003D29FF /* MockDataService.swift */,
+				C592A4672433E32C003D29FF /* ReposListInteractorTests.swift */,
+				C592A4692433E363003D29FF /* ReposListPresenterTests.swift */,
 			);
 			path = "Repos-VIPERTests";
 			sourceTree = "<group>";
@@ -477,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C592A4642433D61D003D29FF /* ReposSearch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +591,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C558AE24242F907A00321096 /* Repos_VIPERTests.swift in Sources */,
+				C592A46A2433E363003D29FF /* ReposListPresenterTests.swift in Sources */,
+				C592A4662433D645003D29FF /* MockDataService.swift in Sources */,
+				C592A4682433E32C003D29FF /* ReposListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
