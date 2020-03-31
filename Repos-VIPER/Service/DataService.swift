@@ -44,6 +44,7 @@ class DataService {
                     let repos = try JSONDecoder().decode([Repo].self, from: data)
                     success(repos)
                 } catch {
+                    print("error: ", error)
                     failure(Utilities.GenericError.wrongJsonFormat)
                 }
             } else {

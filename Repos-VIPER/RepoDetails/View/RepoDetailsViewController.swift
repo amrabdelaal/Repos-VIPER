@@ -45,6 +45,9 @@ class RepoDetailsViewController: UIViewController {
     }
     
     @IBAction func repoOwnerAction(_ sender: Any) {
+        if let repo = repo {
+            presenter?.showUserRepos(with: repo, from: self)
+        }
     }
 }
 
@@ -83,7 +86,7 @@ extension RepoDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        presenter?.showRepoDetails(with: self.repos[indexPath.row], from: self)
+        presenter?.showUserRepos(with: self.forks[indexPath.row], from: self)
     }
 
 }

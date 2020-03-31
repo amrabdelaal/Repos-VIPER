@@ -23,6 +23,10 @@ class RepoDetailsPresenter: RepoDetailsPresenterProtocol {
     func backToReposList(from view: UIViewController) {
         router?.backToReposList(from: view)
     }
+    
+    func showUserRepos(with repo: Repo, from view: UIViewController) {
+        router?.pushToUserRepos(with: repo, from: view)
+    }
 
 }
 

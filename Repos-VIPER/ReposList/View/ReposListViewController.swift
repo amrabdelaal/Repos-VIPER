@@ -68,7 +68,10 @@ extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showRepoDetails(with: self.repos[indexPath.row], from: self)
+        let repo = self.repos[indexPath.row]
+        if repo.forks > 0 {
+            presenter?.showRepoDetails(with: self.repos[indexPath.row], from: self)
+        }
     }
 
 }

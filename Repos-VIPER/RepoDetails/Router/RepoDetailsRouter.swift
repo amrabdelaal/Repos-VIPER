@@ -25,5 +25,11 @@ class RepoDetailsRouter: RepoDetailsRouterProtocol {
         view.navigationController?.popViewController(animated: true)
     }
     
+    func pushToUserRepos(with repo: Repo, from view: UIViewController) {
+        if let userReposViewController = view.storyboard?.instantiateViewController(withIdentifier: "UserReposListViewController") as? UserReposListViewController {
+            UserReposListRouter.createUserReposListModule(userReposListRef: userReposViewController, and: repo)
+            view.navigationController?.pushViewController(userReposViewController, animated: true)
+        }
+    }
     
 }

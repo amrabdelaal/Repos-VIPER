@@ -17,7 +17,7 @@ protocol RepoDetailsPresenterProtocol: class {
     
     func getForks(with language: String)
     func backToReposList(from view: UIViewController)
-//    func showRepoDetails(with repo: Repo, from view: UIViewController)
+    func showUserRepos(with repo: Repo, from view: UIViewController)
 }
 
 // MARK:- Presenter - View
@@ -47,5 +47,5 @@ protocol RepoDetailsInteractorOutputProtocol: class {
 protocol RepoDetailsRouterProtocol: class {
     static func createRepoDetailsModule(with repoDetailsRef: RepoDetailsViewController, and repo: Repo)
     func backToReposList(from view: UIViewController)
-//    func pushToRepoDetails(with repo: Repo,from view: UIViewController)
+    func pushToUserRepos(with repo: Repo,from view: UIViewController)
 }

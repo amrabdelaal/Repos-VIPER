@@ -22,6 +22,13 @@
 		C592A44724324CE8003D29FF /* RepoDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A44624324CE8003D29FF /* RepoDetailsInteractor.swift */; };
 		C592A44B24324D51003D29FF /* RepoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A44A24324D51003D29FF /* RepoDetailsProtocols.swift */; };
 		C592A44E24324D98003D29FF /* RepoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A44D24324D98003D29FF /* RepoDetailsRouter.swift */; };
+		C592A45624333691003D29FF /* UserReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45524333691003D29FF /* UserReposListViewController.swift */; };
+		C592A458243336A9003D29FF /* UserReposListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A457243336A9003D29FF /* UserReposListProtocols.swift */; };
+		C592A45A243336CD003D29FF /* UserReposListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A459243336CD003D29FF /* UserReposListPresenter.swift */; };
+		C592A45C24333708003D29FF /* UserReposListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45B24333708003D29FF /* UserReposListRouter.swift */; };
+		C592A45E2433371B003D29FF /* UserReposListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45D2433371B003D29FF /* UserReposListInteractor.swift */; };
+		C592A46124333A12003D29FF /* UserRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592A45F24333A12003D29FF /* UserRepoTableViewCell.swift */; };
+		C592A46224333A12003D29FF /* UserRepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C592A46024333A12003D29FF /* UserRepoTableViewCell.xib */; };
 		C5A88EAC243147DA00797A51 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A88EAB243147DA00797A51 /* Owner.swift */; };
 		C5D87FA6242F96E7000BEE39 /* ReposListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */; };
 		C5D87FA9242F9C52000BEE39 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D87FA8242F9C52000BEE39 /* Repo.swift */; };
@@ -67,6 +74,13 @@
 		C592A44624324CE8003D29FF /* RepoDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsInteractor.swift; sourceTree = "<group>"; };
 		C592A44A24324D51003D29FF /* RepoDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsProtocols.swift; sourceTree = "<group>"; };
 		C592A44D24324D98003D29FF /* RepoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsRouter.swift; sourceTree = "<group>"; };
+		C592A45524333691003D29FF /* UserReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListViewController.swift; sourceTree = "<group>"; };
+		C592A457243336A9003D29FF /* UserReposListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListProtocols.swift; sourceTree = "<group>"; };
+		C592A459243336CD003D29FF /* UserReposListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListPresenter.swift; sourceTree = "<group>"; };
+		C592A45B24333708003D29FF /* UserReposListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListRouter.swift; sourceTree = "<group>"; };
+		C592A45D2433371B003D29FF /* UserReposListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposListInteractor.swift; sourceTree = "<group>"; };
+		C592A45F24333A12003D29FF /* UserRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoTableViewCell.swift; sourceTree = "<group>"; };
+		C592A46024333A12003D29FF /* UserRepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRepoTableViewCell.xib; sourceTree = "<group>"; };
 		C5A88EAB243147DA00797A51 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		C5D87FA5242F96E7000BEE39 /* ReposListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListProtocols.swift; sourceTree = "<group>"; };
 		C5D87FA8242F9C52000BEE39 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -146,6 +160,7 @@
 				C5D87FB3242FBB14000BEE39 /* Service */,
 				C5D87FA2242F9696000BEE39 /* ReposList */,
 				C592A43E24324C64003D29FF /* RepoDetails */,
+				C592A44F24333616003D29FF /* UserReposList */,
 				C558AE2E242F948500321096 /* Supporting Files */,
 			);
 			path = "Repos-VIPER";
@@ -223,6 +238,8 @@
 			children = (
 				C585EF602430A84E0002A379 /* RepoTableViewCell.swift */,
 				C592A43C24324966003D29FF /* RepoTableViewCell.xib */,
+				C592A45F24333A12003D29FF /* UserRepoTableViewCell.swift */,
+				C592A46024333A12003D29FF /* UserRepoTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -241,6 +258,58 @@
 				C592A44D24324D98003D29FF /* RepoDetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		C592A44F24333616003D29FF /* UserReposList */ = {
+			isa = PBXGroup;
+			children = (
+				C592A45324333640003D29FF /* Protocols */,
+				C592A45024333629003D29FF /* View */,
+				C592A45124333630003D29FF /* Presenter */,
+				C592A45224333637003D29FF /* Router */,
+				C592A4542433364A003D29FF /* Interactor */,
+			);
+			path = UserReposList;
+			sourceTree = "<group>";
+		};
+		C592A45024333629003D29FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C592A45524333691003D29FF /* UserReposListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C592A45124333630003D29FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C592A459243336CD003D29FF /* UserReposListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C592A45224333637003D29FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C592A45B24333708003D29FF /* UserReposListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C592A45324333640003D29FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C592A457243336A9003D29FF /* UserReposListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C592A4542433364A003D29FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C592A45D2433371B003D29FF /* UserReposListInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		C5D87FA2242F9696000BEE39 /* ReposList */ = {
@@ -397,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C558AE19242F907A00321096 /* LaunchScreen.storyboard in Resources */,
+				C592A46224333A12003D29FF /* UserRepoTableViewCell.xib in Resources */,
 				C558AE16242F907A00321096 /* Assets.xcassets in Resources */,
 				C558AE14242F907A00321096 /* Main.storyboard in Resources */,
 				C592A43D24324966003D29FF /* RepoTableViewCell.xib in Resources */,
@@ -484,13 +554,19 @@
 				C5D87FB5242FBB2B000BEE39 /* DataService.swift in Sources */,
 				C5A88EAC243147DA00797A51 /* Owner.swift in Sources */,
 				C592A44724324CE8003D29FF /* RepoDetailsInteractor.swift in Sources */,
+				C592A45E2433371B003D29FF /* UserReposListInteractor.swift in Sources */,
+				C592A46124333A12003D29FF /* UserRepoTableViewCell.swift in Sources */,
+				C592A45A243336CD003D29FF /* UserReposListPresenter.swift in Sources */,
+				C592A45624333691003D29FF /* UserReposListViewController.swift in Sources */,
 				C558AE11242F907A00321096 /* ReposListViewController.swift in Sources */,
 				C592A44424324CCB003D29FF /* RepoDetailsPresenter.swift in Sources */,
 				C592A44E24324D98003D29FF /* RepoDetailsRouter.swift in Sources */,
+				C592A45C24333708003D29FF /* UserReposListRouter.swift in Sources */,
 				C5D87FA6242F96E7000BEE39 /* ReposListProtocols.swift in Sources */,
 				C592A44B24324D51003D29FF /* RepoDetailsProtocols.swift in Sources */,
 				C5D87FA9242F9C52000BEE39 /* Repo.swift in Sources */,
 				C585EF612430A84E0002A379 /* RepoTableViewCell.swift in Sources */,
+				C592A458243336A9003D29FF /* UserReposListProtocols.swift in Sources */,
 				C5D87FB0242FA076000BEE39 /* ReposListInteractor.swift in Sources */,
 				C558AE0D242F907A00321096 /* AppDelegate.swift in Sources */,
 				C592A44124324CA1003D29FF /* RepoDetailsViewController.swift in Sources */,
