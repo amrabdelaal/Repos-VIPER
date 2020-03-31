@@ -8,23 +8,23 @@
 
 import Foundation
 
-struct ReposItems: Codable {
+class ReposItems: Codable {
     let items: [Repo]
 }
 
-struct Repo: Codable {
-    var id: Int
-    var nodeId: String
-    var name: String
-    var fullName: String
-    var htmlUrl: String
-    var fork: Bool
-    var forks: Int
-    var forksUrl: String
-    var watchers: Int
-    var updatedAt: String
-    var description: String
-    var owner: Owner
+class Repo: Codable {
+    var id: Int?
+    var nodeId: String?
+    var name: String?
+    var fullName: String?
+    var htmlUrl: String?
+    var fork: Bool?
+    var forks: Int?
+    var forksUrl: String?
+    var watchers: Int?
+    var updatedAt: String?
+    var description: String?
+    var owner: Owner?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"

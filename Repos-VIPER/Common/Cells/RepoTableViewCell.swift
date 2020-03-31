@@ -33,18 +33,18 @@ class RepoTableViewCell: UITableViewCell {
     }
     
     func configure(with repo: Repo, isFork: Bool = false) {
-        if let url = URL(string: repo.owner.avatarUrl) {
+        if let url = URL(string: repo.owner?.avatarUrl ?? "") {
             self.avatar.af.setImage(withURL: url)
         }
         if isFork == true {
-            self.repoName.text = repo.owner.login
+            self.repoName.text = repo.owner?.login
             self.forksNum.text = ""
             self.watchersNum.text = ""
             self.repoDescription.text = ""
         } else {
             self.repoName.text = repo.name
-            self.forksNum.text = "forks: \(repo.forks)"
-            self.watchersNum.text = "watchers: \(repo.watchers)"
+            self.forksNum.text = "forks: \(repo.forks ?? 0)"
+            self.watchersNum.text = "watchers: \(repo.watchers ?? 0)"
             self.repoDescription.text = repo.description
         }
     }

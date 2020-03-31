@@ -27,7 +27,7 @@ class UserReposListViewController: UIViewController {
     
     func updateUI() {
         if let repo = parentRepo {
-            self.presenter?.getRepos(with: repo.owner.reposUrl)
+            self.presenter?.getRepos(with: repo.owner?.reposUrl ?? "")
         }
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()

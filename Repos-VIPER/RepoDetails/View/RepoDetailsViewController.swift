@@ -30,8 +30,8 @@ class RepoDetailsViewController: UIViewController {
     private func updateUI() {
         if let repo = repo {
             self.repoName.text = repo.name
-            self.repoOwnerBtn.setTitle(repo.owner.login, for: .normal)
-            self.presenter?.getForks(with: repo.forksUrl)
+            self.repoOwnerBtn.setTitle(repo.owner?.login, for: .normal)
+            self.presenter?.getForks(with: repo.forksUrl ?? "")
         }
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()
