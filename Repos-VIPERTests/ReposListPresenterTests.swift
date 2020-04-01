@@ -12,56 +12,88 @@ import XCTest
 class ReposListPresenterTests: XCTestCase {
 
     var presenter: ReposListPresenter?
-    
+    var mockView: MockReposListView?
+    var mockInteractor: MockReposListInteractor?
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        presenter = ReposListPresenter()
+        mockView = MockReposListView()
+        mockInteractor = MockReposListInteractor()
+        presenter?.view = mockView
+        presenter?.interactor = mockInteractor
+        mockInteractor?.presenter = presenter
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        presenter = nil
+        mockView = nil
+        mockInteractor = nil
     }
     
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLoadingWhileRetrieveData() throws {
+        presenter?.getRepos(with: "swift")
+        XCTAssertTrue(mockView?.isLoading == true)
+    }
+    
+    func testLoadingHideAfterGetData() throws {
+        presenter?.getRepos(with: "swift")
+        XCTAssertTrue(mockView?.finishLoading == true)
+    }
+    
+    func testReposCountWithRightSearchWord() throws {
+        presenter?.getRepos(with: "swift")
+        XCTAssertTrue((mockView?.mockRepos.count)! > 0)
+    }
+    
+    func testReposFirstElementNameNotEmpty() throws {
+        presenter?.getRepos(with: "swift")
+        XCTAssertNotEqual(mockView?.mockRepos.first?.name, "")
+    }
+    
+    func testReposFirstElementNameNotNil() throws {
+        presenter?.getRepos(with: "swift")
+        XCTAssertNotNil(mockView?.mockRepos.first?.name)
     }
 
 }
 
 class MockReposListView: ReposListViewProtocol {
     var presenter: ReposListPresenterProtocol?
+    var mockRepos: [Repo] = [Repo]()
+    var error: Error?
+    var isLoading: Bool = false
+    var finishLoading: Bool = false
     
     func showRepos(with repos: [Repo]) {
-        
+        self.mockRepos = repos
     }
     
     func showError() {
-        
+        error = Utilities.GenericError.connectionFaild
     }
     
     func showLoading() {
-        
+        isLoading = true
     }
     
     func hideLoading() {
-        
+        finishLoading = true
     }
 }
 
-class MockReposListInteractorInput: ReposListInteractorInputProtocol {
+class MockReposListInteractor: ReposListInteractorInputProtocol {
     var presenter: ReposListInteractorOutputProtocol?
     
     func retrieveRepos(with language: String) {
-        
+        MockDataService().getRepos(by: language, success: { (repos) in
+            self.presenter?.didRetrieveRepos(repos ?? [Repo]())
+        }) { (error) in
+            self.presenter?.onError()
+        }
     }
+
 }
 
 class MockReposListRouter: ReposListRouterProtocol {
